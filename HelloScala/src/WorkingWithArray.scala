@@ -23,7 +23,15 @@ object WorkingWithArray {
     for(s<-array){
       println(s);
     }
+    
+    //another version of for loop
+    for ( i <- 0 to 2 ) 
+      println(array(i));
+    
+    		val arrray2 = Array("one","two","three")
   }
+  
+  
   
   
 }
