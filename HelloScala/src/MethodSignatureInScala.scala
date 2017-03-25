@@ -3,7 +3,7 @@
 object MethodSignatureInScala {
   
    def main(args: Array[String]): Unit = {  //main method just like java, c, c++ 
-    
+       println("method signature in scala program");
   } 
  
     def method() = print("welcome")   //  another single line method syntax //return type Unit = void(in java)
