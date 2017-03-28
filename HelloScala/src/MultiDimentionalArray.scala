@@ -5,7 +5,7 @@ object MultiDimentionalArray {
 
 
 			var matix = Array.ofDim[Int](2,2) // creating matrix of 2X2 
-					matix(0)(0)=1;   
+			matix(0)(0)=1;   
 			matix(0)(1)=2;
 			matix(1)(0)=3;
 			matix(1)(1)=4;
