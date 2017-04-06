@@ -19,7 +19,7 @@ object ChecksumAccumulator {  // if the class name and singlton object name are 
 
 			def calculate(s:String)={
 					if(cache.contains(s)){
-						cache.get(s);
+						cache(s);
 					}else {
 						var checkSome = new ChecksumAccumulator
 
