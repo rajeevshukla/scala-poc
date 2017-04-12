@@ -14,6 +14,15 @@ class Rational(n:Int, d:Int) {
   def lessThan(that:Rational) = 
     this.numer*that.demon<that.numer*this.demon
   
+  def + (that: Rational) = 
+    new Rational(this.numer*that.demon+that.numer*that.demon,this.demon*that.demon);
+  
+  def / (d:Int) = 
+    new Rational(this.numer,this.demon*d);
+  
+  def / (that: Rational) = 
+    new Rational(numer*that.demon,demon*that.demon);
+    
     def max(that:Rational)  = 
     if (this.lessThan(that)) that else this
   
