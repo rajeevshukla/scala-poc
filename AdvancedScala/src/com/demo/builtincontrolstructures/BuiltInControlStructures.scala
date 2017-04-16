@@ -5,17 +5,19 @@ import scala.io.StdIn
 object BuiltInControlStructures {
 	def main(arg : Array[String]) {
 
+		//implementingFor;
+		implementingForAsAFilter;
 
-		//calling method 
+		/*		//calling method 
 		implmentingIf
     implementingDoWhile 
-    
+
     println("Enter two numbers to calculate gcd")
     val x = StdIn.readLong()
     var y = StdIn.readLong()
     println("GCD : " + gcd(x, y));
 
-
+		 */
 	}
 
 	def implmentingIf() = { 
@@ -32,7 +34,7 @@ object BuiltInControlStructures {
 
 	//calculating GCD using while loop.
 	def gcd (x:Long, y:Long): Long=   { 
-			    var a = x
+			var a = x
 					var b = y
 					while(a !=0) {  // do while never returns interesting results in return. you must have to do that manually. 
 						val temp = a
@@ -45,23 +47,33 @@ object BuiltInControlStructures {
 
 
 	def implementingDoWhile() = { 
-	  println("Enter line to read : ")
-	  var line =""
-	  do {
-	    line = StdIn.readLine()
-	    println("Line :" + line)
-	  } while(line != "")
-	  
+			println("Enter line to read : ")
+			var line =""
+			do {
+				line = StdIn.readLine()
+						println("Line :" + line)
+			} while(line != "")
+
 	}
 
 
 	def implementingFor() = { 
+			val filesHere = (new java.io.File(".")).listFiles
 
+					for(file <- filesHere)
+						println(file)
 	}
 
 
 	def implementingForAsAFilter() = { 
 
+			var filesHere = (new java.io.File(".")).listFiles
+
+					for( 
+							file<-filesHere
+							if(file.isFile);
+							if(file.getName.endsWith(".scala"))
+							) println(file)
 
 	}
 
