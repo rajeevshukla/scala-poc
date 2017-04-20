@@ -7,8 +7,16 @@ object FunctionExample {
  
 	  var numbers = List(1,2,3,4,5,6,-1,-3,-4);
 	  
-	  numbers.filter((x:Int)=>(x>0)); //filter  first class function..
-	  
+	 var filteredNumber =  numbers.filter((x:Int)=>x>0); //filter  first class function..
+	 
+	 println("Filtered numbers :  ")
+	
+	 filteredNumber.foreach(println)
+	 //or filteredNumber.foreach(numbers.filter((x:Int)=>x>0)) in single line.
+	 
+	 
+	 println("Printing all the elements using foreach first class function")
+	 
 	  numbers.foreach((x:Int)=>println(x)) // foreach using first class function 
 	  
 	 //syntax of using first class function 
