@@ -4,9 +4,17 @@ import scala.io.Source
 
 object FunctionExample {
 	def main(arg : Array[String]) { 
-
+ 
+	  var numbers = List(1,2,3,4,5,6,-1,-3,-4);
+	  
+	  numbers.filter((x:Int)=>(x>0)); //filter  first class function..
+	  
+	  numbers.foreach((x:Int)=>println(x)) // foreach using first class function 
+	  
+	 //syntax of using first class function 
+	  // scala> var increase = (x: Int) => x + 1
 	}
-
+ 
 	//local functions
 
 
@@ -22,4 +30,6 @@ object FunctionExample {
 			processLines(fileName, line, width);
 
 	}
+	
+	
 }
